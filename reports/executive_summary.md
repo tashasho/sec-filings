@@ -1,252 +1,222 @@
-# SEC Form D Analysis - Executive Summary
-## VC Market Intelligence Report
-
-**Analysis Period**: 2024-2025 (8 quarters)  
-**Data Source**: SEC Form D filings  
-**Total Offerings Analyzed**: 111,259  
-**Report Date**: February 17, 2026
+# SEC Form D Private Markets Analysis — Executive Summary
+## 2008–2025 Comprehensive Report | 18-Year Historical Analysis
 
 ---
 
-## Key Findings at a Glance
+## Dataset Overview
 
-- **Total Capital Raised**: $24.2 trillion across all offerings (including funds)
-- **Operating Company Deals**: 43,335 offerings
-- **Investment Funds**: 67,924 fund formations
-- **Geographic Concentration**: 81% US-based, with CA, NY, MA leading
-- **Recent Activity** (last 18 months): 75,075 active offerings
-
----
-
-## 1. Market State Assessment
-
-### Overall Health: **ROBUST WITH SELECTIVE COOLING**
-
-The private capital markets showed resilience through 2024-2025, though with notable sector-specific variations:
-
-**Positive Indicators:**
-- Consistent quarterly deal flow maintained above 5,000 deals/quarter for operating companies
-- Median offering size stable around $150M, indicating sustained institutional appetite
-- Strong fund formation activity (67,924 new funds) signals continued LP commitments
-- Geographic diversification improving beyond traditional tech hubs
-
-**Headwinds Observed:**
-- Quarter-over-quarter growth rates moderating from 2024 peaks
-- "Unknown" deal size category (46.7% of offerings) suggests increased use of indefinite offering amounts, potentially indicating market uncertainty
-- Concentration in pooled investment funds (61% of all filings) rather than direct operating company raises
-
-**Market Momentum**: **Moderately Positive** – Markets remain active but more selective
+| Metric | Value |
+|---|---|
+| **Total Form D Filings** | 730,640 |
+| **Date Range** | January 2008 – December 2025 |
+| **Quarters Covered** | 72 (2008Q1 – 2025Q4) |
+| **Unique Issuers** | 354,645 |
+| **Investment Funds** | 387,257 (53.0%) |
+| **Operating Companies** | 343,383 (47.0%) |
+| **US-Based Issuers** | 619,885 (84.8%) |
+| **International Issuers** | 110,755 (15.2%) |
 
 ---
 
-## 2. Sector Opportunities Analysis
+## I. Market Evolution: 2008–2025
 
-### 🔥 **Hot Sectors** (High Activity + Growth Potential)
+### Growth Trajectory
 
-#### **1. Biotechnology & Pharmaceuticals**
-- **Deal Count**: 1,556 biotech + 372 pharma = 1,928 total
-- **Why Now**: FDA approval pipeline strength, aging demographics, post-pandemic R&D acceleration
-- **Investment Thesis**: Clinical-stage companies with novel therapeutics; expect $10-50M Series A/B rounds
-- **Geographic Hotspots**: MA (Boston/Cambridge), CA (Bay Area/San Diego)
+The U.S. exempt offering market, as measured by Form D filings, has undergone transformative growth over the past 18 years:
 
-#### **2. Energy & Clean Tech**
-- **Deal Count**: 1,064 energy-focused offerings
-- **Why Now**: Energy transition tailwinds, government incentives (IRA, infrastructure bills)
-- **Investment Thesis**: Renewable energy infrastructure, battery/storage tech, grid modernization
-- **Deal Sizes**: Wide range from $1M seed to $100M+ growth rounds
+| Period | Avg. Annual Filings | Description |
+|---|---|---|
+| **2008** | 442 | Initial data (partial year, Form D electronic filing launch) |
+| **2009–2012** | 28,118 | Early growth as electronic filing became standard |
+| **2013–2015** | 37,111 | Post-JOBS Act acceleration (+32% jump in 2013-2014) |
+| **2016–2019** | 43,054 | Steady-state growth (~3-6% YoY) |
+| **2020** | 46,089 | COVID disruption: Q2 dip (-20%) followed by rapid Q3-Q4 rebound |
+| **2021–2022** | 62,934 | Post-COVID boom: 2022Q1 peak at 18,558 filings/quarter |
+| **2023–2025** | 54,464 | Market normalization with rate environment adjustment |
 
-#### **3. Financial Services & Fintech**
-- **Deal Count**: 782 insurtech + significant fintech presence in "Other" category
-- **Why Now**: Digital transformation of legacy financial services, embedded finance trends
-- **Investment Thesis**: B2B SaaS fintech, regulatory technology, payments infrastructure
-- **Note**: Many deals under $25M, suitable for Series A/B focus
+#### Key Structural Shifts
+- **JOBS Act Impact (2013-2014)**: The introduction of Rule 506(c) general solicitation led to a 10.5% annual filing jump. By 2014, 89.5% of filings used 506(b) and 6.0% used 506(c).
+- **Regulation A+ (2015)**: Stabilized growth at ~2-3% annually as some issuers shifted to Reg A+.
+- **SPAC/Venture Boom (2021-2022)**: Record filing volumes driven by SPAC activity, crypto/DeFi issuers, and historically low interest rates. Q1 seasonality peaked at 18,558 filings.
+- **Rate Normalization (2023-2025)**: Filing volumes settled ~13% below 2022 peak but 19% above pre-COVID levels, indicating a permanently elevated baseline.
 
-### 📊 **Undervalued / Overlooked Sectors**
+### Capital Markets Activity
 
-#### **Enterprise Software**
-- **Deal Count**: Only 255 explicitly categorized (likely undercounted due to classification issues)
-- **Opportunity**: Many software companies misclassified as "Other" (37,184 offerings)
-- **Action**: Manual review of "Other" category filings with SIC codes 7370-7379 (software services)
-- **Thesis**: AI/ML infrastructure, vertical SaaS, cybersecurity
+Total capital reported as sold across all filings exceeded **$82 trillion** over the study period, with median offering sizes rising from $2.5M (2014 trough) to $3.5M (2019 peak).
 
-#### **AgTech**
-- **Deal Count**: 285 offerings
-- **Opportunity**: Under-the-radar sector with strong fundamentals (food security, climate adaptation)
-- **Deal Characteristics**: Typically $5-15M rounds, often overlooked by coastal VCs
-- **Geographic Opportunity**: Midwest and agricultural states (IA, NE, KS)
-
-### ⚠️ **Sectors to Avoid** (Overcrowded / Declining)
-
-#### **Pooled Investment Funds**
-- **Why Avoid**: Massive supply (67,924 funds) likely outpacing LP demand
-- **Implication**: Fund-of-funds and traditional PE/VC fundraising becoming commoditized
-- **Exception**: Niche/specialized funds in emerging categories may still find LPs
-
-#### **Unspecified "Other" Category**
-- **Issue**: 37,184 offerings with unclear industry classification
-- **Risk**: Lack of specificity may indicate convoluted business models or regulatory arbitrage
-- **Approach**: Requires manual diligence; not efficient for pipeline generation
+| Year | Capital Sold | Median Offering Size |
+|---|---|---|
+| 2009 | $1,984B | $3.0M |
+| 2012 | $4,354B | $2.6M |
+| 2015 | $5,840B | $2.6M |
+| 2018 | $7,708B | $3.1M |
+| 2019 | $7,730B | $3.5M |
 
 ---
 
-## 3. Geographic Intelligence
+## II. Market Composition
 
-### **Top States by Deal Volume** (Operating Companies)
+### Fund Types (53% of All Filings)
 
-1. **California**: Dominant tech ecosystem, but also high competition
-2. **New York**: Finance, fintech, and enterprise software concentration
-3. **Massachusetts**: Biotech/pharma hub (Boston), high median deal sizes
-4. **Texas**: Energy, healthtech, diversified industrial base
-5. **Florida**: Growing startup ecosystem, real estate tech, insurtech
+| Fund Type | Count | Share of Funds |
+|---|---|---|
+| Hedge Fund | 164,944 | 42.6% |
+| Other Investment Fund | 94,153 | 24.3% |
+| Private Equity Fund | 69,733 | 18.0% |
+| Venture Capital Fund | 58,427 | 15.1% |
 
-### **Emerging Ecosystems** (High Growth Potential)
+**Insight**: Hedge funds remain the single largest filing category. VC fund filings (58K) represent the fastest-growing segment, tripling from ~2K/year in 2009 to ~6K/year by 2021.
 
-- **Mountain West (CO, UT)**: Tech talent migration, lower costs, outdoor/lifestyle sectors
-- **Southeast (GA, NC, FL)**: Transplant effect from expensive coastal markets
-- **Evidence**: 81% US concentration sustained despite international presence
+### Operating Company Sectors (47% of All Filings)
 
-### **Strategic Implication**
-Target **secondary markets** (Austin, Denver, Raleigh-Durham, Miami) for better valuations and less competitive deal environments while maintaining access to quality companies.
+| Sector | Count | % of Operating Cos | Capital Sold |
+|---|---|---|---|
+| Other/Diversified | 278,028 | 81.0% | $7,184.8B |
+| Biotech | 14,563 | 4.2% | $172.7B |
+| Energy | 11,138 | 3.2% | $314.1B |
+| Consumer | 9,179 | 2.7% | $55.8B |
+| Industrial | 8,041 | 2.3% | $83.7B |
+| Insurtech | 7,185 | 2.1% | $2,739.2B |
+| Pharma | 5,096 | 1.5% | $63.9B |
+| Enterprise Software | 3,711 | 1.1% | — |
+| Telecom | 2,603 | 0.8% | $61.5B |
+| AgTech | 2,542 | 0.7% | $129.2B |
 
----
+### Deal Size Distribution
 
-## 4. Deal Size Sweet Spots
+| Category | Count | Share |
+|---|---|---|
+| Micro (<$1M) | 124,049 | 17.0% |
+| Seed ($1-5M) | 123,793 | 16.9% |
+| Series A ($5-10M) | 49,133 | 6.7% |
+| Series B ($10-25M) | 49,501 | 6.8% |
+| Series C ($25-50M) | 22,524 | 3.1% |
+| Growth ($50-100M) | 16,459 | 2.3% |
+| Large ($100M+) | 36,884 | 5.0% |
+| Unknown/Indefinite | 308,297 | 42.2% |
 
-Based on 2024-2025 data distribution:
-
-| Category | Range | Deal Count | Market Opportunity |
-|----------|-------|------------|-------------------|
-| **Seed** | $1-5M | 15,297 | ⚠️ Commoditized, high volume |
-| **Series A** | $5-10M | 6,767 | ✅ **OPTIMAL** - Less crowded |
-| **Series B** | $10-25M | 7,695 | ✅ **OPTIMAL** - Proven traction |
-| **Series C** | $25-50M | 3,585 | ⚠️ Requires larger fund size |
-| **Growth** | $50-100M | 2,811 | ❌ Late-stage specialist territory |
-
-**Recommendation**: Focus on **$5M-$25M range** (Series A/B) for optimal risk-reward and competitive dynamics.
-
----
-
-## 5. Strategic Recommendations
-
-### **Where to Focus Sourcing Efforts**
-
-#### **Sector Focus (in priority order)**
-1. **Biotech/Pharma** (MA, CA, NY)
-   - Clinical-stage therapeutics
-   - Diagnostic technologies
-   - Digital health intersections
-
-2. **Energy Transition** (TX, CA, CO)
-   - Battery/storage tech
-   - Smart grid infrastructure
-   - Carbon capture/removal
-
-3. **Enterprise AI/Software** (requires mining "Other" category)
-   - Vertical SaaS
-   - AI infrastructure
-   - Cybersecurity/compliance automation
-
-#### **Geographic Allocation**
-- **50%**: Primary hubs (SF/Bay Area, NYC, Boston) – stay in flow, network effects
-- **30%**: Secondary markets (Austin, Denver, Miami, Seattle) – better valuations
-- **20%**: Opportunistic (outlier companies in smaller ecosystems)
-
-#### **Deal Size Targeting**
-- **Primary**: $10-25M (Series B range)
-- **Secondary**: $5-10M (Series A, higher risk/reward)
-- **Avoid**: Sub-$5M (too early, too competitive) and >$50M (late-stage specialists)
-
-### **Competitive Positioning**
-
-**Differentiation Opportunities:**
-1. **Sector Expertise**: Develop deep domain knowledge in Biotech OR Energy (not both)
-2. **Geographic Arbitrage**: Active presence in emerging hubs (Austin, Denver)
-3. **Operational Value-Add**: Target companies with 1,000+ investors (syndication signal) where relationships matter
-
-**Red Flags in Pipeline:**
-- Multiple amended filings (>3) without clear progress
-- "Indefinite" offering amounts with minimal capital sold
-- Heavy concentration of related persons/directors (insider dealing risk)
-- Non-US jurisdiction with minimal US operations (regulatory arbitrage)
+**Insight**: The "barbell" distribution shows private markets bifurcation — strong activity at sub-$5M (early stage) and $100M+ (mega-rounds/fund formations), with relatively thinner mid-market activity.
 
 ---
 
-## 6. Investment Pipeline Priorities
+## III. Geographic Distribution
 
-### **Immediate Actions (Next 30 Days)**
+### Top States by Filing Volume
 
-1. **Mine the "Other" Category**
-   - Filter by SIC codes 7370-7379, 2834, 2836, 8071 for tech/bio misclassifications
-   - Target 50-100 companies for outbound research
+| Rank | State | Filings | Share |
+|---|---|---|---|
+| 1 | New York | 118,051 | 16.2% |
+| 2 | California | 107,668 | 14.7% |
+| 3 | Texas | 52,811 | 7.2% |
+| 4 | Foreign Private | 43,987 | 6.0% |
+| 5 | Washington | 37,873 | 5.2% |
+| 6 | Massachusetts | 33,621 | 4.6% |
+| 7 | Florida | 28,221 | 3.9% |
+| 8 | Illinois | 26,643 | 3.6% |
+| 9 | Connecticut | 19,242 | 2.6% |
+| 10 | Colorado | 17,429 | 2.4% |
 
-2. **Leverage Recent Filings Filter**
-   - 75,075 offerings filed in last 18 months
-   - Prioritize filings from Q3-Q4 2025 for "hot" deals
+### Regional Distribution
 
-3. **Follow-On Round Targeting**
-   - Companies with multiple filings = momentum signal
-   - Cross-reference with placement agent involvement (quality filter)
+| Region | Filings | Share |
+|---|---|---|
+| Northeast (NY, MA, CT, NJ, PA) | 203,540 | 27.9% |
+| West Coast (CA, WA, OR) | 150,719 | 20.6% |
+| International | 119,982 | 16.4% |
+| Southeast (FL, GA, NC, VA, TN) | 79,092 | 10.8% |
+| Midwest (IL, OH, MI, MN) | 70,706 | 9.7% |
+| Southwest (TX, AZ, NM) | 63,258 | 8.7% |
+| Mountain West (CO, UT, WY, MT) | 42,381 | 5.8% |
 
-### **Key Metrics for Target Screening**
-
-✅ **Quality Signals**
-- Multiple investors (>5)
-- Presence of known placement agents/brokers
-- Clear sector classification
-- US-based with strong state ecosystem (CA, MA, NY, TX)
-- Deal size $5-25M range
-- Recent filing (<12 months)
-- Follow-on round indicator
-
-❌ **Disqualifying Factors**
-- >5 amendments without capital raised
-- "Decline to Disclose" on revenue despite late stage
-- Offshore jurisdiction mismatches
-- Individual company-owned entities (likely real estate/tax vehicles)
+**Insight**: NY and CA together account for 31% of all filings, but their combined share has slowly declined as offerings disperse to TX, FL, and CO. International filings have grown from ~12% in 2009 to ~18% by 2025.
 
 ---
 
-## 7. Data Caveats & Limitations
+## IV. Regulatory Landscape
 
-**Quality Issues Encountered:**
-- 46.7% of offerings have "Indefinite" or missing total offering amounts
-- 97.8% missing SIC codes in submission data
-- Industry classification inconsistent (37,184 in "Other")
-- 39.4% are amendments, requiring deduplication logic for true "new" deal flow
+### Exemption Usage (Post-2014)
 
-**Methodology Notes:**
-- Analysis excludes pooled investment funds for operating company metrics
-- "Recent" defined as last 18 months from current date
-- Capital figures based on `TOTALAMOUNTSOLD` field (actual money raised, not commitments)
-- Geographic analysis uses issuer headquarters, not actual operational footprint
+| Exemption | Share | Trend |
+|---|---|---|
+| Rule 506(b) | ~91% | Dominant, stable since 2014 |
+| Rule 506(c) | ~7% | Gradual increase from 6% (2014) to 7.2% (2019) |
+| Other/Pre-JOBS Act | ~2% | Legacy filings |
 
-**Recommended Follow-Up Research:**
-1. Manual review of top 100 "Other" category companies
-2. Cross-reference with Pitchbook/Crunchbase for validated sector tags
-3. LinkedIn analysis of "Related Persons" for team quality assessment
-4. News/PR monitoring for momentum validation
+**Key Finding**: Despite enabling general solicitation, Rule 506(c) adoption has been modest (7%). Most issuers continue to prefer 506(b), likely due to the additional compliance burden of verifying accredited investor status required under 506(c).
 
 ---
 
-## 8. Conclusion & Next Steps
+## V. COVID-19 Impact Analysis
 
-**Market Verdict**: Private markets remain active with $24T+ in capital movement, but increasing selectivity requires disciplined sector focus and  geographic strategy.
+| Metric | Pre-COVID (2019) | COVID (2020) | Post-COVID Peak (2022) |
+|---|---|---|---|
+| Annual Filings | 45,804 | 46,089 | 62,440 |
+| Q2 Filings (seasonal trough) | 11,679 | 10,202 | 16,124 |
+| Median Offering Size | $3.5M | $3.3M | ~$3.5M |
 
-**Winning Formula for Current Environment**:
-- **Sectors**: Biotech, Energy Transition, Enterprise AI
-- **Geography**: 50% tier-1 hubs + 30% emerging markets
-- **Stage**: Series A/B ($5-25M)
-- **Differentiation**: Deep sector expertise + value-add beyond capital
-
-**Next Quarter Priorities**:
-1. Build target list of 50-100 companies from filtered dataset
-2. Establish presence in secondary markets (Austin, Denver)
-3. Develop biotech or energy sector expertise (choose one)
-4. Monitor Q1 2026 filings for emerging pattern confirmation
+- **Q2 2020 dip**: 12.6% decline vs Q2 2019 — notably modest given the economic disruption
+- **V-shaped recovery**: Q4 2020 already exceeded Q4 2019 by 12.3%
+- **Boom phase**: 2021-2022 saw 36% growth over 2019 levels, driven by monetary stimulus and SPAC activity
+- **Normalization**: 2023-2025 settled ~19% above pre-COVID baseline
 
 ---
 
-**Prepared by**: SEC Form D Analysis Pipeline  
-**Data Coverage**: 2024-2025 (111,259 offerings)  
-**Visualizations**: 9+ charts available in `/visualizations` directory  
-**Methodology**: Documented in `reports/methodology.md`
+## VI. Investment Target Analysis
+
+From 730,640 filings, our scoring model identified **43 high-conviction target companies** based on:
+- Sector alignment (Biotech, Pharma, Enterprise Software)
+- Deal size ($5-25M sweet spot)
+- Geographic fit (innovation hubs)
+- Momentum signals (follow-on offerings, investor count growth)
+- Quality signals (placement agents, institutional investor base)
+
+### Top Target Sectors
+
+| Sector | Count | Score Range |
+|---|---|---|
+| Biotech | 35 | 20.0 – 21.0 |
+| Pharma | 6 | 21.0 |
+| Energy | 2 | 20.0 |
+
+### Top Target Geographies
+
+| State | Count | Notable Companies |
+|---|---|---|
+| CA | 10 | TALPHERA, Alume Biosciences, Potrero Medical |
+| NY | 8 | Indaptus Therapeutics, Synaptogenix, Cresilon |
+| MA | 6 | AltrixBio, Microbot Medical, Angiex |
+| TX | 5 | Nuclein, OncoNano Medicine |
+| FL | 3 | TuHURA Biosciences, Mel-Mont Medical |
+
+---
+
+## VII. Key Takeaways for Fund Managers
+
+1. **Market Maturity**: The private exempt offering market has grown 3x since 2010 (from ~30K to ~55K annual filings), representing a permanently enlarged market with structural depth.
+
+2. **Biotech Dominance in Operating Cos**: Biotech/Pharma represent 5.7% of operating company filings but an outsized share of VC-scale deals ($5-50M), making them the most target-rich sector for growth equity.
+
+3. **Geographic Diversification**: While NY/CA remain dominant, secondary markets (Austin, Denver, Miami, Seattle) are growing faster and may offer less competitive deal sourcing.
+
+4. **506(c) Opportunity**: With only 7% adoption, the general solicitation pathway remains underutilized. Funds that can leverage public marketing while managing the verification burden may find less competition.
+
+5. **COVID Resilience**: Private markets proved remarkably resilient during COVID, with a shallow dip and rapid recovery, suggesting private offerings serve as a stable capital formation channel even during systemic stress.
+
+6. **Filing Seasonality**: Q1 consistently shows 15-20% higher filing volumes than Q3, suggesting optimal deployment timing aligns with Q1/Q4 filing cycles.
+
+---
+
+## VIII. Methodology
+
+| Component | Detail |
+|---|---|
+| **Data Source** | SEC EDGAR Form D filings (structured data sets) |
+| **Coverage** | All Form D and Form D/A filings, 2008Q1 – 2025Q4 |
+| **Processing** | Python (pandas, numpy) — data loading, cleaning, standardization |
+| **Sector Mapping** | SEC Industry Group Type + SIC Code → 12 sector taxonomy |
+| **Scoring Model** | Weighted multi-factor: Sector (25%), Momentum (25%), Size (20%), Geography (15%), Quality (15%) |
+| **Visualizations** | matplotlib + seaborn — 9 charts across temporal and sector dimensions |
+
+---
+
+*Report generated: February 2026 | Data source: SEC EDGAR | Analysis by Z5 Capital*

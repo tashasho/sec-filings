@@ -1,91 +1,132 @@
-# SEC Form D Analysis - VC Market Intelligence Platform
+# SEC Form D Private Markets Analysis
 
-A comprehensive analytical pipeline to analyze SEC Form D filings, providing actionable investment intelligence for venture capital decision-making.
+> **18-Year Longitudinal Study of U.S. Exempt Offerings (2008–2025)**  
+> An analytical toolkit for investment professionals studying private capital formation trends.
 
 ## Overview
 
-This project analyzes **111,259 Form D filings** from 2024-2025 to surface:
-- Market trends in private capital markets
-- Sector dynamics and growth patterns
-- Geographic investment patterns
-- Scored target company list for deal sourcing
+This repository contains a comprehensive analysis pipeline for SEC Form D filings — the regulatory disclosures required for private securities offerings in the United States. The analysis covers **730,640 filings** across **72 quarters** (2008Q1–2025Q4), representing the most complete publicly available dataset on U.S. private capital markets.
 
-## Key Findings
+### Key Metrics
 
-- **Total Capital Raised**: $24.2T across all offerings (including funds)
-- **Operating Company Deals**: 43,335 offerings
-- **Investment Funds**: 67,924 fund formations
-- **Top Sectors**: Biotech (1,556), Energy (1,064), Insurtech (782)
-- **Deal Size Sweet Spot**: $10-25M (Series B range)
+| Metric | Value |
+|---|---|
+| Total Filings Analyzed | 730,640 |
+| Unique Issuers | 354,645 |
+| Date Range | Jan 2008 – Dec 2025 |
+| Investment Funds | 387,257 (53%) |
+| Operating Companies | 343,383 (47%) |
+| Target Companies Identified | 43 |
 
-## Project Structure
+## Repository Structure
 
 ```
-├── analysis/                      # Analysis code
-│   ├── config.py                  # Configuration & sector mappings
-│   ├── data_loader.py             # Data loading pipeline
-│   ├── data_cleaning.py           # Cleaning & transformation
-│   ├── temporal_analysis.py       # Time series analysis
-│   ├── sector_analysis.py         # Sector intelligence
-│   ├── target_generator.py        # Opportunity scoring
-│   └── run_pipeline.py            # Master pipeline script
-├── reports/
-│   ├── executive_summary.md       # Executive summary
-│   ├── data_quality_report.txt    # Data quality documentation
-│   └── target_companies.csv       # Scored target list
-├── visualizations/
-│   ├── temporal/                  # 4 time series charts
-│   └── sector/                    # 5 sector analysis charts
-├── tests/                         # Test suite
-└── README.md
+sec-filings/
+├── analysis/                    # Python analysis modules
+│   ├── config.py               # Configuration & sector mappings
+│   ├── data_loader.py          # Multi-format quarterly data loader
+│   ├── data_cleaning.py        # Cleaning, feature engineering
+│   ├── run_pipeline.py         # Pipeline orchestrator
+│   ├── temporal_analysis.py    # Time-series analysis & visualizations
+│   ├── sector_analysis.py      # Sector analysis & visualizations
+│   ├── target_generator.py     # Scoring model for investment targets
+│   └── download_sec_data.py    # SEC EDGAR data downloader
+├── reports/                     # Generated reports
+│   ├── executive_summary.md    # Executive summary (2008-2025)
+│   ├── market_analysis_report.md # Detailed market analysis
+│   ├── target_companies.csv    # Scored target company list
+│   └── data_quality_report.txt # Data validation results
+├── visualizations/              # Generated charts
+│   ├── temporal/               # 4 time-series visualizations
+│   └── sector/                 # 5 sector analysis charts
+├── 2008/ - 2025/               # Raw SEC data (not in repo)
+└── data/                       # Processed datasets (not in repo)
 ```
 
 ## Quick Start
 
 ### Prerequisites
-- Python 3.10+
-- pandas, numpy, matplotlib, seaborn
-
-### Run the Pipeline
-
 ```bash
-# 1. Download Form D data from SEC
-# Place quarterly data in directories: 2024Q1_d/, 2024Q2_d/, etc.
-
-# 2. Run the full pipeline
-python3 analysis/run_pipeline.py
-
-# 3. Run temporal analysis
-python3 analysis/temporal_analysis.py
-
-# 4. Run sector analysis
-python3 analysis/sector_analysis.py
-
-# 5. Generate target company list
-python3 analysis/target_generator.py
+pip install pandas numpy matplotlib seaborn
 ```
 
-## Data Source
+### 1. Download Data
+```bash
+python analysis/download_sec_data.py    # Downloads 2008-2021 from SEC
+```
 
-[SEC Form D Data Sets](https://www.sec.gov/data-research/sec-markets-data/form-d-data-sets)
+### 2. Run Pipeline
+```bash
+python analysis/run_pipeline.py         # Load + clean all quarters
+```
 
-## Deliverables
+### 3. Run Analysis
+```bash
+python analysis/temporal_analysis.py    # Temporal trends & growth
+python analysis/sector_analysis.py      # Sector distribution & capital
+python analysis/target_generator.py     # Score and rank targets
+```
 
-| Deliverable | Location |
-|-------------|----------|
-| Executive Summary | `reports/executive_summary.md` |
-| Target Companies | `reports/target_companies.csv` |
-| Data Quality Report | `reports/data_quality_report.txt` |
-| Temporal Charts (4) | `visualizations/temporal/` |
-| Sector Charts (5) | `visualizations/sector/` |
+## Data Sources
 
-## Strategic Recommendations
+All data is sourced directly from [SEC EDGAR Form D Data Sets](https://www.sec.gov/data-research/sec-markets-data/form-d-data-sets), which are released quarterly. Each quarter contains:
 
-1. **Sector Focus**: Biotech (MA, CA), Energy Transition (TX, CA, CO), Enterprise AI
-2. **Geography**: 50% tier-1 hubs + 30% secondary markets (Austin, Denver, Miami)
-3. **Deal Size**: Target $5-25M range (Series A/B)
-4. **Quality Filters**: Multiple investors, placement agents, follow-on rounds
+- **FORMDSUBMISSION.tsv** — Filing metadata, dates, SIC codes
+- **ISSUERS.tsv** — Company information, state, entity type
+- **OFFERING.tsv** — Offering details, amounts, exemptions, investors
+- **RELATEDPERSONS.tsv** — Directors, officers, promoters
+- **RECIPIENTS.tsv** — Sales compensation recipients
+- **SIGNATURES.tsv** — Authorized signers
+
+## Key Findings
+
+1. **Market Growth**: Filing volumes grew from ~21K (2009) to ~56K (2025), a 2.7x increase
+2. **COVID Resilience**: Only a 12.6% Q2 2020 dip, with V-shaped recovery
+3. **Post-COVID Boom**: 2021-2022 saw record volumes (62K+), driven by SPAC/VC activity
+4. **506(b) Dominance**: 91% of filings use Rule 506(b) vs only 7% for 506(c)
+5. **Geographic Shift**: NY+CA share declined from 42% to 36% as FL, CO, WA grow
+6. **Biotech Pipeline**: Most target-rich sector for operating company investments
+
+## Analysis Modules
+
+### Data Loader (`data_loader.py`)
+Handles three directory structures across the 18-year dataset:
+- **2008-2021**: Double-nested from zip extraction
+- **2022-2023**: Year-nested quarterly directories
+- **2024-2025**: Top-level quarterly directories
+
+### Data Cleaning (`data_cleaning.py`)
+- Flexible date parsing (mixed formats with quarter-metadata fallback)
+- Sector mapping (SEC Industry Group → 12-sector taxonomy)
+- Deal size categorization (Micro through Large)
+- Fund classification (Hedge, PE, VC, Other)
+
+### Target Generator (`target_generator.py`)
+Multi-factor scoring model:
+- **Sector Fit** (25%) — Alignment with thesis sectors
+- **Momentum** (25%) — Follow-on filings, investor growth
+- **Deal Size** (20%) — $5-25M sweet spot
+- **Geography** (15%) — Innovation hub proximity
+- **Quality** (15%) — Placement agents, team size
+
+## Visualizations
+
+| Chart | Description |
+|---|---|
+| `temporal_quarterly_volume_capital.png` | 72-quarter filing volume and capital trends |
+| `temporal_monthly_trends.png` | Monthly seasonality patterns |
+| `temporal_growth_rates.png` | Year-over-year and quarter-over-quarter growth |
+| `temporal_volume_vs_size.png` | Deal volume vs median offering size |
+| `sector_distribution.png` | Sector filing distribution |
+| `sector_capital.png` | Capital raised by sector |
+| `sector_growth.png` | Sector growth rates over time |
+| `sector_concentration.png` | Market concentration metrics |
+| `sector_deal_sizes.png` | Deal size distributions by sector |
 
 ## License
 
-MIT
+This analysis uses publicly available SEC data. The code in this repository is provided for educational and analytical purposes.
+
+---
+
+*Built by Z5 Capital | Data: SEC EDGAR | Analysis: Python (pandas, matplotlib, seaborn)*

@@ -41,52 +41,88 @@ class FormDDataLoader:
         # Storage for loaded data
         self.master_data: Dict[str, pd.DataFrame] = {}
         
-    def get_available_quarters(self) -> List[Tuple[int, int]]:
+    def get_available_quarters(self) -> List[Tuple[int, int, Path]]:
         """
-        Identify all available quarterly data directories
+        Identify all available quarterly data directories across different structures.
+        
+        Handles:
+        - Top-level: base/2024Q1_d/ (2024-2025)
+        - Year-nested: base/2022/2022Q1_d/ (2022-2023)
+        - Double-nested from zip: base/2008/2008Q1_d/2008Q1_d/ (downloaded 2008-2021)
         
         Returns:
-            List of (year, quarter) tuples
+            List of (year, quarter, path_to_tsv_dir) tuples
         """
         quarters = []
         
-        # Look for quarterly directories (2024Q1_d, 2024Q2_d, etc.)
+        def try_parse_quarter_dir(name: str):
+            """Extract year/quarter from dir name like '2024Q1_d'"""
+            try:
+                clean = name.replace('_d', '')
+                parts = clean.split('Q')
+                return int(parts[0]), int(parts[1])
+            except (ValueError, IndexError):
+                return None, None
+        
         for item in self.base_path.iterdir():
-            if item.is_dir() and 'Q' in item.name and '_d' in item.name:
-                try:
-                    parts = item.name.replace('_d', '').split('Q')
-                    year = int(parts[0])
-                    quarter = int(parts[1])
-                    quarters.append((year, quarter))
-                except (ValueError, IndexError):
-                    logger.warning(f"Skipping directory with unexpected format: {item.name}")
+            if not item.is_dir():
+                continue
+            
+            # Pattern 1: Top-level quarterly dir like "2024Q1_d"
+            if 'Q' in item.name and '_d' in item.name:
+                year, quarter = try_parse_quarter_dir(item.name)
+                if year and quarter:
+                    quarters.append((year, quarter, item))
+                continue
+            
+            # Pattern 2: Year directory like "2022" containing quarterly subdirs
+            try:
+                year_val = int(item.name)
+                if 2008 <= year_val <= 2030:
+                    for sub in item.iterdir():
+                        if sub.is_dir() and 'Q' in sub.name and '_d' in sub.name:
+                            year, quarter = try_parse_quarter_dir(sub.name)
+                            if year and quarter:
+                                # Check for double-nesting (zip extracted another folder inside)
+                                inner = sub / sub.name
+                                if inner.is_dir() and any(inner.glob("*.tsv")):
+                                    quarters.append((year, quarter, inner))
+                                elif any(sub.glob("*.tsv")):
+                                    quarters.append((year, quarter, sub))
+                                else:
+                                    # Maybe TSVs are one more level down
+                                    for inner_sub in sub.iterdir():
+                                        if inner_sub.is_dir() and any(inner_sub.glob("*.tsv")):
+                                            quarters.append((year, quarter, inner_sub))
+                                            break
+            except ValueError:
+                continue
                     
         # Sort by year and quarter
-        quarters.sort()
+        quarters.sort(key=lambda x: (x[0], x[1]))
         return quarters
     
-    def load_quarterly_data(self, year: int, quarter: int) -> Dict[str, pd.DataFrame]:
+    def load_quarterly_data(self, year: int, quarter: int, data_dir: Path) -> Dict[str, pd.DataFrame]:
         """
         Load all TSV files for a specific quarter
         
         Args:
             year: Year (e.g., 2024)
             quarter: Quarter number (1-4)
+            data_dir: Path to the directory containing TSV files
             
         Returns:
             Dictionary of dataframes keyed by table type
         """
-        quarter_dir = self.base_path / f"{year}Q{quarter}_d"
+        if not data_dir.exists():
+            raise FileNotFoundError(f"Quarter directory not found: {data_dir}")
         
-        if not quarter_dir.exists():
-            raise FileNotFoundError(f"Quarter directory not found: {quarter_dir}")
-        
-        logger.info(f"Loading data for {year} Q{quarter}...")
+        logger.info(f"Loading data for {year} Q{quarter} from {data_dir}...")
         
         quarterly_data = {}
         
         for data_type, filename in self.data_files.items():
-            file_path = quarter_dir / filename
+            file_path = data_dir / filename
             
             if not file_path.exists():
                 logger.warning(f"File not found: {file_path}")
@@ -127,8 +163,8 @@ class FormDDataLoader:
             raise ValueError("No quarterly data directories found")
         
         logger.info(f"Found {len(quarters)} quarters of data:")
-        for year, quarter in quarters:
-            logger.info(f"  - {year} Q{quarter}")
+        for year, quarter, data_dir in quarters:
+            logger.info(f"  - {year} Q{quarter} -> {data_dir}")
         
         # Initialize consolidated dataframes
         consolidated: Dict[str, List[pd.DataFrame]] = {
@@ -136,9 +172,9 @@ class FormDDataLoader:
         }
         
         # Load each quarter and append to consolidated list
-        for year, quarter in quarters:
+        for year, quarter, data_dir in quarters:
             try:
-                quarterly_data = self.load_quarterly_data(year, quarter)
+                quarterly_data = self.load_quarterly_data(year, quarter, data_dir)
                 
                 for data_type, df in quarterly_data.items():
                     consolidated[data_type].append(df)

@@ -87,13 +87,29 @@ class FormDDataCleaner:
         """
         logger.info("\nCleaning SUBMISSIONS table...")
         
-        # Parse filing date
-        df['filing_date'] = pd.to_datetime(df['FILING_DATE'], format=FILING_DATE_FORMAT, errors='coerce')
+        # Parse filing date - use flexible format to handle multiple date formats
+        # across different years (e.g., '2008-01-02 06:01:00', '31-DEC-2025', etc.)
+        df['filing_date'] = pd.to_datetime(df['FILING_DATE'], errors='coerce', format='mixed', dayfirst=False)
         
-        # Extract year and month
+        # Extract year and month from parsed dates
         df['filing_year'] = df['filing_date'].dt.year
         df['filing_month'] = df['filing_date'].dt.month
         df['filing_quarter'] = df['filing_date'].dt.quarter
+        
+        # Fallback: use data_year/data_quarter metadata when filing_date couldn't be parsed
+        mask_no_date = df['filing_date'].isna()
+        if mask_no_date.any():
+            df.loc[mask_no_date, 'filing_year'] = df.loc[mask_no_date, 'data_year']
+            df.loc[mask_no_date, 'filing_quarter'] = df.loc[mask_no_date, 'data_quarter']
+            # Approximate filing_month from quarter midpoint
+            df.loc[mask_no_date, 'filing_month'] = (df.loc[mask_no_date, 'data_quarter'] - 1) * 3 + 2
+            # Create approximate filing_date from year/quarter
+            df.loc[mask_no_date, 'filing_date'] = pd.to_datetime(
+                df.loc[mask_no_date, 'filing_year'].astype(int).astype(str) + '-' +
+                df.loc[mask_no_date, 'filing_month'].astype(int).astype(str) + '-15',
+                errors='coerce'
+            )
+            logger.info(f"  Filled {mask_no_date.sum():,} missing dates using data_year/data_quarter")
         
         # Clean SIC code
         df['sic_code'] = df['SIC_CODE'].fillna('').str.strip()

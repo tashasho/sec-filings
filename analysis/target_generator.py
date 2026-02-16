@@ -206,7 +206,9 @@ def main():
     data_path = base_path / "data" / "cleaned_analytical.csv"
     
     print("Loading analytical dataset...")
-    df = pd.read_csv(data_path, parse_dates=['filing_date', 'sale_date'])
+    df = pd.read_csv(data_path, low_memory=False)
+    df['filing_date'] = pd.to_datetime(df['filing_date'], errors='coerce')
+    df['sale_date'] = pd.to_datetime(df['sale_date'], errors='coerce')
     
     print(f"Loaded {len(df):,} offerings\n")
     

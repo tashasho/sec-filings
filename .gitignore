@@ -1,0 +1,28 @@
+# Ignore raw data files (too large for git)
+*.zip
+.DS_Store
+__pycache__/
+*.pyc
+
+# Raw quarterly data directories
+2022/
+2022.zip
+2023/
+2023.zip
+2024.zip
+2024Q1_d/
+2024Q2_d/
+2024Q3_d/
+2024Q4_d/
+2025.zip
+2025Q1_d/
+2025Q2_d/
+2025Q3_d/
+2025Q4_d/
+
+# Processed data (too large, regenerated from pipeline)
+data/
+
+# Env files
+.env
+*.env

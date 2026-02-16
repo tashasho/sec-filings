@@ -1,0 +1,110 @@
+================================================================================
+SEC FORM D DATA QUALITY REPORT
+================================================================================
+Generated: 2026-02-17 01:58:34
+
+
+================================================================================
+TABLE: SUBMISSIONS
+================================================================================
+Total Rows: 111,259
+Total Columns: 12
+Duplicate Keys: 0
+
+Missing Values:
+  OVER100PERSONSFLAG: 111,259 (100.0%)
+  OVER100ISSUERFLAG: 111,259 (100.0%)
+  SIC_CODE: 108,775 (97.8%)
+
+================================================================================
+TABLE: ISSUERS
+================================================================================
+Total Rows: 113,058
+Total Columns: 26
+Duplicate Keys: 1799
+
+Missing Values:
+  ISSUER_PREVIOUSNAME_3: 112,915 (99.9%)
+  ISSUER_PREVIOUSNAME_2: 112,496 (99.5%)
+  EDGAR_PREVIOUSNAME_3: 112,407 (99.4%)
+  EDGAR_PREVIOUSNAME_2: 110,629 (97.9%)
+  ISSUER_PREVIOUSNAME_1: 108,766 (96.2%)
+  EDGAR_PREVIOUSNAME_1: 101,898 (90.1%)
+  ENTITYTYPEOTHERDESC: 101,466 (89.7%)
+  STREET2: 50,214 (44.4%)
+  YEAROFINC_VALUE_ENTERED: 27,841 (24.6%)
+  JURISDICTIONOFINC: 23 (0.0%)
+
+Data Quality Issues:
+  - Found 1799 duplicate accession numbers
+
+================================================================================
+TABLE: OFFERINGS
+================================================================================
+Total Rows: 111,259
+Total Columns: 44
+Duplicate Keys: 0
+
+Missing Values:
+  OVER100RECIPIENTFLAG: 111,259 (100.0%)
+  ISTENANTINCOMMONTYPE: 111,124 (99.9%)
+  ISMINERALPROPERTYTYPE: 111,084 (99.8%)
+  BUSCOMBCLARIFICATIONOFRESP: 110,432 (99.3%)
+  ISSECURITYTOBEACQUIREDTYPE: 107,055 (96.2%)
+  ISDEBTTYPE: 105,925 (95.2%)
+  ISOPTIONTOACQUIRETYPE: 105,766 (95.1%)
+  NUMBERNONACCREDITEDINVESTORS: 105,503 (94.8%)
+  FINDERFEECLARIFICATIONOFRESP: 100,329 (90.2%)
+  ISOTHERTYPE: 99,839 (89.7%)
+
+================================================================================
+TABLE: RECIPIENTS
+================================================================================
+Total Rows: 52,368
+Total Columns: 18
+Duplicate Keys: 0
+
+Missing Values:
+  ASSOCIATEDBDCRDNUMBER: 34,695 (66.3%)
+  ASSOCIATEDBDNAME: 33,529 (64.0%)
+  STREET2: 27,302 (52.1%)
+  RECIPIENTCRDNUMBER: 11,841 (22.6%)
+  STATES_OR_VALUE_LIST: 6,786 (13.0%)
+  DESCRIPTIONS_LIST: 6,786 (13.0%)
+  RECIPIENTNAME: 2,959 (5.7%)
+  FOREIGNSOLICITATION: 1,759 (3.4%)
+  STREET1: 1,059 (2.0%)
+  CITY: 1,010 (1.9%)
+
+================================================================================
+TABLE: RELATED_PERSONS
+================================================================================
+Total Rows: 387,369
+Total Columns: 18
+Duplicate Keys: 0
+
+Missing Values:
+  RELATIONSHIP_3: 378,719 (97.8%)
+  RELATIONSHIP_2: 320,765 (82.8%)
+  MIDDLENAME: 258,294 (66.7%)
+  RELATIONSHIPCLARIFICATION: 168,728 (43.6%)
+  STREET2: 158,137 (40.8%)
+  FIRSTNAME: 48,218 (12.4%)
+  LASTNAME: 215 (0.1%)
+  ZIPCODE: 104 (0.0%)
+  CITY: 41 (0.0%)
+  STREET1: 3 (0.0%)
+
+================================================================================
+TABLE: SIGNATURES
+================================================================================
+Total Rows: 112,793
+Total Columns: 10
+Duplicate Keys: 0
+
+Missing Values:
+  SIGNATURETITLE: 1 (0.0%)
+
+================================================================================
+END OF REPORT
+================================================================================
